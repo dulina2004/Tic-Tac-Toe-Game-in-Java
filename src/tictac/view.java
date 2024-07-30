@@ -40,57 +40,67 @@ public class view extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        title.setFont(new java.awt.Font("Segoe UI Semilight", 1, 24)); // NOI18N
         title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         title.setText("O turn");
 
+        btn31.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btn31.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn31ActionPerformed(evt);
             }
         });
 
+        btn32.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btn32.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn32ActionPerformed(evt);
             }
         });
 
+        btn33.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btn33.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn33ActionPerformed(evt);
             }
         });
 
+        btn22.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btn22.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn22ActionPerformed(evt);
             }
         });
 
+        btn12.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btn12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn12ActionPerformed(evt);
             }
         });
 
+        btn11.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btn11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn11ActionPerformed(evt);
             }
         });
 
+        btn23.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btn23.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn23ActionPerformed(evt);
             }
         });
 
+        btn13.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btn13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn13ActionPerformed(evt);
             }
         });
 
+        btn21.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btn21.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn21ActionPerformed(evt);
@@ -158,10 +168,11 @@ public class view extends javax.swing.JFrame {
                     .addComponent(btn22, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btn21, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn12, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn11, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn13, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btn11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btn12, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btn13, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(0, 8, Short.MAX_VALUE))
         );
 
@@ -339,6 +350,15 @@ public class view extends javax.swing.JFrame {
         if (b11==true&&b12==true&&b13==true&&b21==true&&b22==true&&b23==true&&b31==true&&b32==true&&b33==true) {
             System.out.println("draw");
             title.setText("Draw");
+        btn11.setEnabled(false);
+        btn12.setEnabled(false);
+        btn13.setEnabled(false);
+        btn21.setEnabled(false);
+        btn22.setEnabled(false);
+        btn23.setEnabled(false);
+        btn31.setEnabled(false);
+        btn32.setEnabled(false);
+        btn33.setEnabled(false);
         }
         if (btn11.getText().equals(btn12.getText())&&btn11.getText().equals(btn13.getText())&&(b11==true&&b12==true&&b13==true)) {
                     title.setText("win");
